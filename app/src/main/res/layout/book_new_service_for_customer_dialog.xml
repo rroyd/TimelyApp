@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:textColor="@color/dark_blue"
+                android:layout_height="wrap_content"
+                android:textSize="40dp"
+                android:fontFamily="@font/font_heavy"
+                android:textAlignment="center"
+                android:text="אישור" />
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:paddingHorizontal="30dp"
+                android:fontFamily="@font/font_heavy"
+                android:textAlignment="textStart"
+                android:text="תור" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/cancel"
+                    android:layout_margin="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/extrabbold"
+                    android:background="@color/pale_violet_red"
+                    android:text="ביטול" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/book"
+                    android:layout_margin="20dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/holo_blue_bright"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/extrabbold"
+
+                    android:text="לקביעת תור" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

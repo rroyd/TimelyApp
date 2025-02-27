@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CreateBookingService">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:textColor="@color/dark_blue"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:fontFamily="@font/font_heavy"
+        android:textAlignment="center"
+        android:text="בחר מועד לקביעת השירות" />
+
+    <TextView
+        android:id="@+id/service_name"
+        android:layout_width="match_parent"
+        android:textColor="@color/dark_blue"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:fontFamily="@font/font_light"
+        android:textAlignment="center"
+        android:text="שם השירות" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <CalendarView
+                android:id="@+id/booking_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:firstDayOfWeek="7" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="match_parent"
+                android:textColor="@color/dark_blue"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:fontFamily="@font/font_heavy"
+                android:textAlignment="textStart"
+                android:text="מועדים פנויים:" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/available_dates"
+                android:layout_weight="1"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:fontFamily="@font/emi_bold"
+                android:id="@+id/go_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="חזור" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</FrameLayout>

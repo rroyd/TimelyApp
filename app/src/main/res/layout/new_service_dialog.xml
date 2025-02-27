@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textSize="40dp"
+                android:fontFamily="@font/font_heavy"
+                android:textAlignment="center"
+                android:text="שירות חדש" />
+
+            <EditText
+                android:id="@+id/service_name"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="61dp"
+                android:fontFamily="@font/font_heavy"
+                android:hint="שם השירות"
+                android:inputType="text"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textDirection="anyRtl" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/currency"
+                    android:hint="₪"
+                    >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/currency_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:textSize="30dp"
+                        android:text="₪" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <EditText
+                    android:id="@+id/service_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/font_heavy"
+                    android:hint="מחיר השירות"
+                    android:inputType="numberDecimal"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textDirection="anyRtl" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/duration_title"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:paddingHorizontal="30dp"
+                android:fontFamily="@font/font_heavy"
+                android:textAlignment="textStart"
+                android:text="משך השירות" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="30dp"
+                android:orientation="horizontal">
+
+                <NumberPicker
+                    android:id="@+id/service_duartion_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/font_heavy"
+                    android:hint="שעות"
+                    android:inputType="number"
+                    android:solidColor="@color/light_grey"
+                    android:maxLength="2"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textDirection="anyRtl" />
+
+                <TextView
+                    android:id="@+id/semicolon"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:textSize="40dp"
+                    android:fontFamily="@font/font_heavy"
+                    android:textAlignment="center"
+                    android:text=":" />
+
+                <NumberPicker
+                    android:id="@+id/service_duartion_minute"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:solidColor="@color/light_grey"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/font_heavy"
+                    android:hint="דקות"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textDirection="anyRtl" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/minute"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:fontFamily="@font/font_heavy"
+                android:textAlignment="center"
+                android:text="דקות   :   שעות" />
+
+            <TextView
+                android:id="@+id/availablity_title"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:paddingHorizontal="30dp"
+                android:fontFamily="@font/font_heavy"
+                android:textAlignment="textStart"
+                android:text="זמינות השירות" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/selected_day"
+                android:layout_marginHorizontal="0dp"
+                android:layout_marginBottom="10dp"
+                app:tabTextColor="@color/black"
+                app:tabSelectedTextColor="@color/sky_blue"
+                app:tabIndicatorColor="@color/sky_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ש" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ו" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ה" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ד" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ג" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ב" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="א" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+
+                    android:background="@color/light_blue"
+                    android:id="@+id/select_start_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_heavy"
+                    android:layout_weight="1"
+                    android:text="בחר שעת התחלה" />
+                <TextView
+                    android:fontFamily="@font/font_medium"
+                    android:id="@+id/start_time_label"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="שעת התחלה" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginBottom="15dp"
+
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+
+                    android:background="@color/light_blue"
+                    android:id="@+id/select_end_time"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/font_heavy"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="בחר שעת סיום" />
+
+
+                <TextView
+                    android:fontFamily="@font/font_medium"
+                    android:id="@+id/end_time_label"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="שעת סיום" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+
+                    android:id="@+id/set_for_all_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/sky_blue"
+                    android:fontFamily="@font/font_heavy"
+                    android:text="הגדר טווח שעות לכל הימים" />
+
+                <androidx.appcompat.widget.AppCompatButton
+
+                    android:id="@+id/clear_range"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/dark_red"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/font_heavy"
+                    android:text="נקה בחירה" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+
+                    android:id="@+id/add_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/greenYellow"
+                    android:fontFamily="@font/font_heavy"
+                    android:text="הוסף שירות" />
+
+                <androidx.appcompat.widget.AppCompatButton
+
+                    android:id="@+id/cancel_new_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:background="@color/red"
+                    android:fontFamily="@font/font_heavy"
+                    android:text="ביטול" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
