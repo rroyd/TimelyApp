@@ -20,7 +20,7 @@ A mobile application for booking services, built using **Java** in **Android Stu
 - **UI Components:** Material Design, ConstraintLayout, LinearLayout, TextInputLayout, Spinner (Dropdown)
 
 ## 📸 Screenshots
-_(Add screenshots here)_
+Soon to come!
 
 ## 📂 Project Structure
 ```
